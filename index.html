@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FBF7EF" />
+    <meta
+      name="description"
+      content="星星桥是面向孤独症儿童的语料库分级阅读干预研究原型，帮助家长和特教老师找到孩子愿意读、也读得懂的那一页。"
+    />
+    <title>星星桥 · 孤独症儿童分级阅读</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#/home" data-route="home" aria-label="星星桥首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" role="img">
+              <path d="M5 24c3-5 6-7 11-7s8 2 11 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M8 17c2-3 4-4 8-4s6 1 8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M11 11c2-2 4-3 5-3s3 1 5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M16 5v3M7 13l2 2M25 13l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="brand-name">星星桥</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="打开导航"
+          data-action="toggle-nav"
+        >
+          <span class="nav-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="主要导航">
+          <a href="#/home" data-route="home">今日一页</a>
+          <a href="#/assess" data-route="assess">分级评估</a>
+          <a href="#/agent" data-route="agent">智能伴读</a>
+          <a href="#/books" data-route="books">分级书架</a>
+          <a href="#/guide" data-route="guide">陪读指南</a>
+          <a href="#/research" data-route="research">研究背景</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1"></main>
+
+    <nav class="bottom-nav" aria-label="快捷导航">
+      <a href="#/home" data-route="home">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        <span>今日一页</span>
+      </a>
+      <a href="#/assess" data-route="assess">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        <span>评估</span>
+      </a>
+      <a href="#/agent" data-route="agent">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        <span>伴读</span>
+      </a>
+      <a href="#/books" data-route="books">
+        <span class="bottom-nav-icon" aria-hidden="true"></span>
+        <span>书架</span>
+      </a>
+    </nav>
+
+    <button
+      class="agent-fab"
+      type="button"
+      data-agent-action="open-agent"
+      aria-label="打开星星伴读智能体"
+    >
+      <span class="agent-fab-icon" aria-hidden="true"></span>
+      <span class="agent-fab-label">星星伴读</span>
+    </button>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/illustrations.js"></script>
+    <script src="char-data.js"></script>
+    <script src="data.js"></script>
+    <script src="agent.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
