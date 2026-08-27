@@ -195,6 +195,17 @@
     </g>`;
   }
 
+  function balloons(p, x, y, scale) {
+    const s = scale || 1;
+    return `<g transform="translate(${x} ${y}) scale(${s})">
+      <path d="M-80 130C-70 90-48 78-30 72M10 130C4 94 16 82 30 74M92 128C86 92 104 80 118 72" fill="none" stroke="${p.ink}" stroke-width="2" stroke-linecap="round" opacity="0.25" />
+      <ellipse cx="-92" cy="-18" rx="36" ry="44" fill="${p.wash || "#C6E3D8"}" opacity="0.66" />
+      <ellipse cx="18" cy="-62" rx="42" ry="50" fill="${p.sun || "#F8D987"}" opacity="0.58" />
+      <ellipse cx="120" cy="2" rx="30" ry="38" fill="${p.sand || "#F5E4CB"}" opacity="0.72" />
+      <path d="M-92 26L-95 34M18 2L15 10M120 40L118 48" stroke="${p.ink}" stroke-width="3" stroke-linecap="round" opacity="0.28" />
+    </g>`;
+  }
+
   function starField(p, x, y, scale) {
     const s = scale || 1;
     const star = (sx, sy, r) => {
@@ -216,6 +227,7 @@
       return `
         ${blob(220, 178, 172, 128, p.sun, 0.58, 38)}
         ${blob(1188, 158, 120, 98, p.wash, 0.42, 36)}
+        ${balloons(p, 850, 330, 1.08)}
         ${ground(p, 760)}
         ${cat(p, 980, 750, 1.42)}
       `;
